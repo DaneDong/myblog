@@ -3,7 +3,7 @@ from .models import Article
 
 # Create your views here.
 def article_list(request):
-    articles=Article.object.all()
+    articles=Article.objects.all()
     context={}
     context['articles']=articles 
     return render_to_response("article_list.html",context)
